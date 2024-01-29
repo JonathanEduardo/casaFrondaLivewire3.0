@@ -1,0 +1,227 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+[x-cloak] {
+    display: none;
+}
+/*-----Loader-------------*/
+.baseBgLoading{ @apply fixed  z-50 left-0 top-0 w-full bg-opacity-60 bg-gray-700 h-full}
+.containerLoading{@apply flex items-center justify-center w-full h-full}
+.spinLoading{@apply w-1/4 h-1/4 text-gray-200 animate-spin dark:text-companyColor-primary fill-lime-300}
+.textLoading{@apply absolute text-2xl text-lime-300}
+/*---------SELECT 2-------*/
+
+
+.select2-container--default .select2-selection--single {
+    @apply rounded px-3 py-1 border-companyColor-secondary bg-companyColor-primary text-companyColor-secondary focus:outline-none focus:ring-2 focus:ring-companyColor-third focus:border-transparent focus:text-companyColor-third w-full !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    @apply text-companyColor-secondary !important;
+}
+
+.select2-container--open .select2-dropdown--below {
+    @apply bg-companyColor-primary-lighter !important;
+    /* color de las opciones contenedor*/
+}
+
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+    @apply bg-lime-300 text-companyColor-primary-lighter font-semibold !important;
+}
+
+.select2-container--default .select2-results__option--selected {
+    @apply bg-companyColor-primary text-lime-300 !important;
+    /*Una vez selecionado al seleccionar otro o hacer hover en otro este queda asi*/
+}
+
+.select2-container{
+    @apply w-full !important;
+}
+
+.select2-selection {
+    padding: .5rem !important;
+    height: 2.5rem !important;
+    border: solid 1px transparent !important;
+    font-size: 1rem !important;
+}
+
+.select2-results__option {
+    font-size: .8rem !important;
+    @apply bg-transparent;
+}
+
+.select2-selection__arrow {
+    padding-top: 2.5rem !important;
+}
+
+
+.scrollx {
+    overflow-x: auto;
+}
+
+.scrollEdit::-webkit-scrollbar {
+    width: 8px;
+    /* width of the entire scrollbar */
+    border-radius: 20px;
+}
+
+.scrollEdit::-webkit-scrollbar-track {
+    @apply bg-companyColor-primary;
+    /* color of the tracking area */
+    border-radius: 20px;
+}
+
+.scrollEdit::-webkit-scrollbar-thumb {
+
+    @apply bg-companyColor-third;
+    /* color of the scroll thumb */
+    border-radius: 20px;
+    /* roundness of the scroll thumb */
+
+}
+
+.scrollEdit::-webkit-scrollbar-thumb:hover {
+    background: #1118278a;
+    box-shadow: 0 0 2px 1px rgb(0 0 0 / 20%);
+
+
+    /*background-color: cadetblue;*/
+}
+
+/* Configuracion barra de navegacion*/
+.listMenu {
+    @apply relative flex flex-row items-center h-11 focus:outline-none hover:bg-companyColor-secondary  text-white  border-l-4 border-transparent hover:border-white  pr-6;
+}
+
+.nav_active {
+    @apply text-teal-300 underline
+}
+
+
+/* Ruta: menu */
+.mainTitle {
+    @apply text-base font-medium mb-2 text-white
+}
+
+.menuProducts {
+    @apply flex flex-row gap-5 w-full text-companyColor-text1 border-2 border-rose-400 bg-companyColor-secondary rounded-lg justify-center py-2 px-14;
+}
+
+.labelFilter {
+    @apply flex flex-col justify-center w-1/5;
+}
+
+.diabledFilter {
+    @apply opacity-50;
+}
+
+.enabledFilter {
+    @apply rounded-md text-teal-300;
+}
+
+
+/*------------------Panel administrador-----------------*/
+/*Cuerpo*/
+.bodySection{
+    @apply relative  py-1 lg:py-4  text-companyColor-primary
+}
+/* Modals*/
+.bntClose {
+    @apply animate-fade-left animate-duration-500 text-lime-300 hover:text-red-400 cursor-pointer text-2xl
+}
+
+.inputText {
+    @apply rounded px-3 py-1.5 border-companyColor-secondary bg-companyColor-primary text-white focus:outline-none focus:ring-2 focus:ring-companyColor-third-lighter focus:border-transparent
+     focus:text-companyColor-third-lighter appearance-none block w-full  border  mb-1 leading-tight  ;
+}
+.bgBaseModal{
+   @apply z-40 left-0 top-0 w-full bg-opacity-60 bg-gray-500 h-full
+}
+.modalDetails{
+    @apply flex flex-col justify-between bg-white ml-14 w-10/12 md:w-9/12 lg:md:w-7/12 md:mx-auto  mt-14 rounded-lg
+}
+.modalHeader{
+    @apply text-companyColor-third text-xl font-bold px-4 md:px-12 py-2 rounded-t
+}
+.titleModal {
+    @apply animate-fade-down animate-duration-500 underline
+}
+
+
+.modalBody {
+    @apply overflow-y-auto px-3 md:px-12 py-4 scrollEdit
+}
+
+.modalFooter {
+    @apply px-12 py-4 flex flex-row-reverse rounded-b gap-4
+}
+
+.inputTextTitle {
+    @apply text-companyColor-text2 font-medium block uppercase tracking-wide text-sm mb-1;
+}
+
+.sectionInputx1 {
+    @apply w-full ;
+}
+
+.sectionInputx2 {
+    @apply w-full md:w-1/2 mb-6 md:mb-0;
+}
+
+.sectionInputx3 {
+    @apply w-full ;
+}
+
+.slotFormx1 {
+    @apply flex flex-col  w-full  mt-3;
+}
+
+.slotFormx2 {
+    @apply flex flex-col md:flex-row w-full gap-4 mt-3;
+}
+
+.slotFormx3 {
+    @apply flex flex-col md:flex-row w-full gap-4 mt-3;
+}
+
+
+.btnTransparentSave {
+    @apply animate-fade-up animate-duration-500 px-6 py-1  border-2 text-white  bg-companyColor-secondary  font-bold rounded-xl
+}
+
+.btnTransparentCancel {
+    @apply animate-fade-up animate-duration-500 px-6 py-1  border-2 text-white  bg-companyColor-third  font-bold  rounded-xl
+}
+
+.errorBack {
+    @apply text-xs italic font-thin tracking-wider mt-0.5
+}
+
+/*  Tabla principal   */
+.bgTable{
+    @apply relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded bg-white border border-cyan-800 text-companyColor-text2;
+}
+.titleTable{
+    @apply font-semibold text-lg relative w-full px-1 max-w-full flex-grow flex-1 text-white;
+}
+.thTable{
+    @apply cursor-pointer px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap text-left bg-gray-50 text-companyColor-third font-bold;
+}
+.tdTable{
+    @apply border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4;
+}
+.btnAdd{
+    @apply border-2 text-white  bg-companyColor-secondary  font-bold hover:bg-white hover:text-companyColor-text1   hover:border-companyColor-secondary rounded-md px-3 py-1.5 w-fit
+}
+.btnDelete{
+    @apply bg-rose-500 hover:bg-rose-600 rounded-md p-1 text-base text-white;
+}
+.btnEdit{
+    @apply bg-cyan-800 hover:bg-cyan-700 rounded-md p-1 text-base text-white;
+}
+
+
+.status{
+    @apply bg-green-700  bg-yellow-600 bg-red-500;
+}
