@@ -217,6 +217,7 @@
 
                         <input wire:model="bookEdit.name_book" type="text" class="inputText">
 
+
                         @error('name_book')
                         <span class="errorBack"> {{$message}}</span>
                         @enderror
